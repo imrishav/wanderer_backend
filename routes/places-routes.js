@@ -1,23 +1,23 @@
-const express = require("express");
+const express = require('express')
 
-const router = express.Router();
+const router = express.Router()
 
 const {
-  getPlaceById,
+  getPlacesById,
   getPlaceByUserId,
   createPlace,
   updatePlace,
   deletePlace
-} = require("../controllers/place-controllers");
+} = require('../controllers/place-controllers')
 
-router.get("/:pid", getPlaceById);
+router.get('/:pid', getPlacesById)
 
-router.get("/user/:uid", getPlaceByUserId);
+router.get('/user/:uid', getPlaceByUserId)
 
-router.post("/", createPlace);
+router.post('/', createPlace)
 
-router.patch("/:pid", updatePlace);
+router.patch('/:pid', updatePlace)
 
-router.delete("/:pid", deletePlace);
+router.delete('/:pid', deletePlace)
 
-module.exports = router;
+module.exports = router
