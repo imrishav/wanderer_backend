@@ -23,8 +23,6 @@ module.exports.getPlacesById = async (req, res, next) => {
   if (!place) {
     const error = new HttpError("Could Not Find a place for Provided Id", 404);
     return next(error);
-
-    throw new HttpError("Could Not find a place with the id", 400);
   }
 
   res.json({ place: place.toObject({ getters: true }) });
