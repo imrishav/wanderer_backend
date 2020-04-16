@@ -3,7 +3,7 @@
 FROM node:alpine
 
 #Install Depenendecies
-
+COPY ./ ./
 RUN npm install
 
 # Default Command
